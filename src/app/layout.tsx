@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import "swiper/css/bundle";
 
 export const metadata: Metadata = {
   title: "Luiz Rodrigues",

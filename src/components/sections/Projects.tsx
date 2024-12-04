@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import Container from "../layout/Container";
@@ -6,7 +5,6 @@ import { motion } from "motion/react";
 import { slides } from "@/utils/slides";
 import { useEffect, useState } from "react";
 import CarouselComp from "../layout/CarouselComp";
-import Link from "next/link";
 
 const Projects = () => {
   const [slideNum, setSlideNum] = useState<number>();

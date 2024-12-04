@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
 import Image from "next/image";
 import Swiper from "swiper/bundle";
 import { slide } from "@/utils/slides";
@@ -14,18 +14,27 @@ type Props = {
 };
 
 const CarouselComp = ({ onSlideChange, slides, className }: Props) => {
-  const swiper = new Swiper(".swiper", {
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
+  const defineSwiper = () => {
+    try {
+      new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
+
+  defineSwiper();
 
   return (
     <SwiperComponent
@@ -34,7 +43,7 @@ const CarouselComp = ({ onSlideChange, slides, className }: Props) => {
       onSlideChange={(sw) => onSlideChange(sw)}
       effect="coverflow"
     >
-      {slides.map((item, i) => (
+      {slides.map((item) => (
         <SwiperSlide key={item.id}>
           <Image
             src={item.src}

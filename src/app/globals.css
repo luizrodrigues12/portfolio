@@ -2,20 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "parkinsans";
+  src: url("../fonts/Parkinsans-Medium.ttf") format("opentype");
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "parkinsans-regular";
+  src: url("../fonts/Parkinsans-Regular.ttf") format("opentype");
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #101010, #060606);
 }
+
+.about-section {
+  background: linear-gradient(45deg, #101010 90%, #060606);
+}
+
+.project-section {
+  background: linear-gradient(225deg, #101010 40%, #060606);
+}
+
+.swiper-slide {
+  margin-right: 0px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply m-3 self-center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply rounded-full !text-zinc-200 bg-[#101010d2];
+}
+
+.swiper-button-prev::after {
+  @apply p-3 pl-2 pr-3;
+}
+
+.swiper-button-next::after {
+  @apply p-3 pl-3 pr-2;
+}
+
+.border-animate {
+  @apply rounded-full flex justify-center items-center;
+  position: relative;
+  z-index: -2;
+}
+
+.h1 {
+  color: #859ce0;
+}
+
+.border-animate::before,
+.border-animate::after {
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  background: linear-gradient(
+    90deg,
+    #202020,
+    #202020,
+    #ebebf0,
+    #ebebf0,
+    #202020,
+    #202020
+  );
+  background-size: 300%;
+  animation: AnimarBorda 6s linear infinite;
+}
+
+@keyframes AnimarBorda {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+.desenho-luiz {
+  filter: saturate(60%) brightness(100%);
+}
+
+/* @media (max-width: 780px) {
+  .bg-about {
+    background: linear-gradient(90deg, #141414, #080808);
+  }
+} */

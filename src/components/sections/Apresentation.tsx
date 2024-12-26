@@ -24,6 +24,7 @@ const Apresentation = () => {
               width={600}
               height={600}
               priority
+              unoptimized={true}
               className="rounded-full bg-[#030303] w-[250px] h-[250px] md:w-[340px] md:h-[340px] lg:w-[100%] lg:h-[100%] xl:w-[100%] xl:h-[100%] 2xl:w-[100%]"
             />
           </motion.div>

@@ -63,16 +63,14 @@ const Carousel = ({
         </div>
 
         <motion.div className={`w-full h-full flex relative z-[1]`}>
-          {slides.map((slideItem, i) => (
-            <Image
-              key={i}
-              src={slides[i].src}
-              alt="Foto"
-              width={800}
-              height={800}
-              className={`w-full ${i == slideNum ? "block" : "hidden"}`}
-            />
-          ))}
+          <Image
+            src={slides[slideNum].src}
+            alt="Foto"
+            width={800}
+            height={800}
+            priority={true}
+            className={`w-full`}
+          />
         </motion.div>
       </div>
     </div>

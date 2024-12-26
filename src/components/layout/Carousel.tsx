@@ -20,7 +20,7 @@ const Carousel = ({
   return (
     <div className="w-full flex justify-center items-center">
       <div className="relative flex justify-center items-center">
-        <div className="absolute flex justify-between px-3 w-full items-center">
+        <div className="absolute flex justify-between px-3 w-full items-center z-[2]">
           <motion.div
             className="flex flex-col items-center justify-center bg-[#00000080] text-zinc-200 text-[40px] rounded-full cursor-pointer px-0.5 py-3"
             onClick={onClickPrevBtn}
@@ -50,7 +50,7 @@ const Carousel = ({
           </motion.div>
         </div>
 
-        <div className="absolute self-end mb-4 flex gap-1.5">
+        <div className="absolute self-end mb-4 flex gap-1.5 z-[2]">
           {slides.map((item, i) => (
             <div
               key={i}
@@ -62,14 +62,17 @@ const Carousel = ({
           ))}
         </div>
 
-        <motion.div className="w-full h-full">
-          <Image
-            src={slides[slideNum].src}
-            alt="Foto"
-            width={800}
-            height={800}
-            className="w-full"
-          />
+        <motion.div className={`w-full h-full flex relative z-[1]`}>
+          {slides.map((slideItem, i) => (
+            <Image
+              key={i}
+              src={slides[i].src}
+              alt="Foto"
+              width={800}
+              height={800}
+              className={`w-full ${i == slideNum ? "block" : "hidden"}`}
+            />
+          ))}
         </motion.div>
       </div>
     </div>

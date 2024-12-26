@@ -44,6 +44,7 @@ const Projects = () => {
                     if (slideNum! < slides.length - 1)
                       setSlideNum(slideNum! + 1);
                   }}
+                  setSlideNum={setSlideNum}
                   onClickPrevBtn={() => {
                     if (slideNum > 0) setSlideNum(slideNum! - 1);
                   }}

@@ -4,10 +4,10 @@ import Container from "../layout/Container";
 import { motion } from "motion/react";
 import { slides } from "@/utils/slides";
 import { useEffect, useState } from "react";
-import CarouselComp from "../layout/CarouselComp";
+import Carousel from "../layout/Carousel";
 
 const Projects = () => {
-  const [slideNum, setSlideNum] = useState<number>();
+  const [slideNum, setSlideNum] = useState<number>(0);
 
   useEffect(() => setSlideNum(0), []);
 
@@ -37,17 +37,21 @@ const Projects = () => {
               viewport={{ once: true }}
               className="w-full h-full border-4 border-[#262626] flex flex-col md:flex-row justify-between rounded-sm"
             >
-              <div className="w-full h-full md:w-[55%] 2xl:w-[45%]">
-                <CarouselComp
-                  slides={slides}
-                  onSlideChange={(sw) => {
-                    setSlideNum(sw.realIndex);
+              {/* CAROUSEL */}
+              <div className="w-full h-full md:w-[55%] 2xl:w-[45%] lg:w-[55%]">
+                <Carousel
+                  onClickNextBtn={() => {
+                    if (slideNum! < slides.length - 1)
+                      setSlideNum(slideNum! + 1);
                   }}
-                  className="w-full"
+                  onClickPrevBtn={() => {
+                    if (slideNum > 0) setSlideNum(slideNum! - 1);
+                  }}
+                  slideNum={slideNum ? slideNum : 0}
                 />
               </div>
 
-              <div className="flex flex-col justify-start gap-2 px-4 py-5 bg-[#090909] ">
+              <div className="flex flex-col justify-start gap-2 px-4 py-5 bg-[#090909] w-full md:w-[45%] lg:w-[45%] 2xl:w-[55%]">
                 <h3 className="font-parkinsans text-[1.3em] md:text-[1.4em] underline underline-offset-4 ">
                   <a
                     target="_blank"
@@ -81,14 +85,4 @@ const Projects = () => {
   );
 };
 
-{
-  /* <div>
-            <h3>Minerva</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam
-              molestiae non veritatis nihil perferendis sed quod expedita.
-            </p>
-            <p>Skilss: NextJS</p>
-          </div> */
-}
 export default Projects;

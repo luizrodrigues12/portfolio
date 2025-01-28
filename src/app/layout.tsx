@@ -17,12 +17,6 @@ export default function RootLayout({
     <html lang="pt-br" className="!scroll-smooth">
       <body className="flex flex-col justify-between items-center">
         <Header />
-        {/* <NextTopLoader
-          color="#eeeeee"
-          showSpinner={false}
-          speed={1000}
-          shadow={false}
-        /> */}
         <main className="min-h-screen flex flex-col justify-center items-center w-full">
           {children}
         </main>

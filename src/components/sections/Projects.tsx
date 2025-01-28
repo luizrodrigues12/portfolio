@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <section
       className="flex flex-col justify-start items-center min-h-screen w-full text-zinc-200 snap-start 
-    border-t-[3px] border-[#212121] scroll-mt-[6.5vh] project-section"
+    border-t-[2px] border-[#212121] scroll-mt-[7vh] bg-[#101012]"
       id="projects"
     >
       <Container className="text-zinc-200">
@@ -35,7 +35,7 @@ const Projects = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
               viewport={{ once: true }}
-              className="w-full h-full border-4 border-[#262626] flex flex-col md:flex-row justify-between rounded-sm"
+              className="w-full h-full border-2 border-[#262626] flex flex-col md:flex-row justify-between rounded-sm"
             >
               {/* CAROUSEL */}
               <div className="w-full h-full md:w-[55%] 2xl:w-[45%] lg:w-[55%]">
@@ -52,8 +52,8 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="flex flex-col justify-start gap-2 px-4 py-5 bg-[#090909] w-full md:w-[45%] lg:w-[45%] 2xl:w-[55%]">
-                <h3 className="font-parkinsans text-[1.3em] md:text-[1.4em] underline underline-offset-4 ">
+              <div className="flex flex-col justify-start gap-4  py-5 bg-[#090909] w-full md:w-[45%] lg:w-[45%] 2xl:w-[55%] border-l-[#262626] border-l-2 px-4 md:px-6">
+                <h3 className="font-parkinsans text-[1.5em] md:text-[1.6em] underline underline-offset-4 ">
                   <a
                     target="_blank"
                     href={slides[slideNum ? slideNum : 0].link}

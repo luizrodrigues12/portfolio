@@ -6,7 +6,7 @@ const NavPC = () => {
   const router = useRouter();
 
   return (
-    <ul className="hidden text-white flex-col items-center md:flex md:flex-row md:gap-8 md:text-lg md:p-0">
+    <ul className="hidden text-white flex-col items-center md:flex md:flex-row md:gap-14 md:text-lg md:p-0">
       <motion.div
         className="hover:text-blue-300 border-b-[2px] border-zinc-200 w-full text-center md:border-0 hover:cursor-pointer"
         onClick={() => router.push("#apresentation")}

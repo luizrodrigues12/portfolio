@@ -16,10 +16,6 @@
   font-display: swap;
 }
 
-body {
-  background: linear-gradient(180deg, #101010, #060606);
-}
-
 .about-section {
   background: linear-gradient(45deg, #101010 90%, #060606);
 }
@@ -53,7 +49,7 @@ body {
 .border-animate {
   @apply rounded-full flex justify-center items-center;
   position: relative;
-  z-index: -2;
+  z-index: 1;
 }
 
 .h1 {

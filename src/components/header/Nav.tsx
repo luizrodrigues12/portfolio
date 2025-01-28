@@ -29,7 +29,7 @@ const Nav = () => {
         transition={{ duration: 1, delay: 0.3 }}
         className="w-full md:flex md:justify-between md:w-[85%] lg:w-[70%] xl:w-[62%] "
       >
-        <div className="px-10 md:pl-0 text-zinc-200 flex justify-between items-center h-[7vh] ">
+        <div className="px-10 md:pl-0 text-zinc-200 flex justify-between items-center h-[9vh] ">
           <Link
             href={"/"}
             className="flex items-center text-[20px] md:text-[24px] font-parkinsans cursor-pointer hover:text-white"

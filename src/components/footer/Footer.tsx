@@ -9,7 +9,7 @@ const Footer = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.2 }}
-      className="text-zinc-200 py-5 pt-5 text-sm text-center border-t-[3px] border-zinc-900 w-full"
+      className="text-zinc-200 bg-[#101012] h-20 text-sm text-center border-t-[2px] border-zinc-900 w-full flex items-center justify-center"
     >
       Luiz Rodrigues / {ano}
     </motion.div>

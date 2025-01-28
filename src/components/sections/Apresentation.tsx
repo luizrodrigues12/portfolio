@@ -8,10 +8,10 @@ const Apresentation = () => {
   return (
     <section
       id="apresentation"
-      className="flex flex-col items-center justify-center md:items-center md:flex-row w-full min-h-[100vh] snap-center"
+      className="flex flex-col items-center justify-center md:items-center md:flex-row w-full min-h-[100vh] snap-center bg-[#101012]"
     >
       <Container>
-        <div className="flex flex-col lg:flex-row-reverse gap-3 md:gap-8 lg:gap-8 2xl:gap-24 justify-center w-full items-center mb-10 ">
+        <div className="flex flex-col lg:flex-row-reverse gap-3 md:gap-8 lg:gap-8 2xl:gap-24 justify-center w-full items-center mb-10">
           <motion.div
             className="border-animate shadow-lg w-[250px] h-[250px] md:w-[340px] md:h-[340px] lg:w-[50%] lg:h-[50%] xl:w-[100%] xl:h-[100%] 2xl:w-[70%]"
             initial={{ opacity: 0 }}

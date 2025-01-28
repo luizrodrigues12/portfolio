@@ -13,9 +13,9 @@ export const slides: Array<slide> = [
     title: "Minerva",
     description:
       "Aplicação WEB criada para diminuir o trabalho manual de planejamento escolar e facilitar o acesso dos pais à situação de estudo dos alunos.",
-    skills: "NextJS, Typescript, JWT, SWR",
+    skills: "NextJS, Typescript, JWT, Tanstack",
     src: "/images/minerva-03.jpg",
-    link: "https://minerva-app.netlify.app/",
+    link: "https://minerva-gamma.vercel.app",
   },
   {
     id: 1,

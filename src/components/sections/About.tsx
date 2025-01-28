@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       className="flex flex-col items-center justify-center lg:flex-row-reverse md:items-center
-    text-zinc-300 min-h-screen w-full bg-about border-t-[3px] border-[#212121] snap-center about-section"
+    text-zinc-300 min-h-screen w-full bg-about border-t-[2px] border-[#212121] snap-center bg-[#101012]"
       id="about"
     >
       <Container>
@@ -61,7 +61,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="flex justify-center items-center"
+              className="flex justify-start items-center"
             >
               <Image
                 src={"/images/desenho-luiz.png"}
